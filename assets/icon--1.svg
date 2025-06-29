@@ -1,0 +1,14 @@
+<svg width="35" height="35" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card background -->
+  <rect x="4" y="4" width="56" height="56" rx="6" ry="6" fill="#E6E6E6" stroke="#1D0C00" stroke-width="1.5"/>
+
+  <!-- Stripe across the card -->
+  <rect x="4" y="18" width="56" height="8" fill="#C4C4C4"/>
+
+  <!-- Two chip/contact dots -->
+  <circle cx="22" cy="42" r="5" fill="#1D0C00"/>
+  <circle cx="34" cy="42" r="5" fill="#1D0C00"/>
+
+  <!-- Rupee symbol -->
+  <text x="45" y="46" font-family="Arial, sans-serif" font-size="20" fill="#1D0C00" font-weight="bold">₹</text>
+</svg>

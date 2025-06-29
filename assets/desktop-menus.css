@@ -1,0 +1,27 @@
+@media only screen and (max-width: 749px) {
+  .menu-strip {
+    display: none;
+  }
+}
+
+.menu-strip {
+  background-color: #EEE9E6;
+  padding: 10px 0;
+  text-align: center;
+}
+.menu-strip__list {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu-strip__item a {
+  text-decoration: none;
+  color: #000;
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}

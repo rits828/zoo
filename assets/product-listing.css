@@ -1,0 +1,49 @@
+custom-carousel .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: #532200 !important;
+  /* border-color: var(--custom-button-color);
+  border: 1px solid var(--custom-button-color);
+  background: transparent; */
+}
+/* custom-carousel .splide__pagination__page.is-active {
+   width: 10px;
+  height: 10px;
+  background: #532200;
+  padding: 4px;
+  border: 1px solid red;
+} */
+.splide__pagination li {
+  padding: 1px !important;
+}
+.splide__pagination__page.is-active {
+  transform: scale(1);
+  outline: 2px solid #532200 !important;
+  outline-offset: 3px;
+}
+custom-carousel .splide__pagination {
+  bottom: 0;
+}
+.star-svg svg {
+  vertical-align: middle;
+}
+.section-title {
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.new-arrivals-section .splide__pagination  {
+  position: unset;
+}
+@media only screen and (min-width: 768px) {
+  .section-title {
+    font-size: 50px;
+    line-height: 48px;
+    margin-bottom: 35px;
+  }
+}

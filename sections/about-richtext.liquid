@@ -1,0 +1,97 @@
+{{ 'about-richtext.css' | asset_url | stylesheet_tag }}
+<div class="richtext-about page-width {{ section.id }}">
+  <div class="container-richtext">
+    <div class="upper-container">
+    {% if section.settings.richtext_head != blank %}
+      <h2>{{ section.settings.richtext_head }}</h2>
+    {% endif %}
+    {% if section.settings.richtext_para != blank %}
+      <p class="richtext-paragraph">{{ section.settings.richtext_para }}</p>
+    {% endif %}
+  </div>
+  <div class="bottom-container">
+    {% if section.settings.brand_note != blank %}
+      <h3>{{ section.settings.brand_note }}</h3>
+    {% endif %}
+  </div>
+  </div>
+</div>
+<style>
+     .{{ section.id }} {
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+      }
+    @media (min-width: 768px) {
+      .{{ section.id }} {
+        padding-top: {{ section.settings.padding_top_desktop }}px;
+        padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+      }
+  }
+</style>
+{% schema %}
+{
+  "name": "About Us Richtext",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "text",
+      "id": "richtext_head",
+      "label": "Richtext Head"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext_para",
+      "label": "Richtext Para"
+    },
+    {
+      "type": "text",
+      "id": "brand_note",
+      "label": "Brand Note"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Us Richtext"
+    }
+  ]
+}
+{% endschema %}

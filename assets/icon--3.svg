@@ -1,0 +1,13 @@
+<svg width="35" height="35" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Return Arrow (curved) -->
+  <path d="M14 50a24 24 0 1 1 36-18" stroke="#1D0C00" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"/>
+  <path d="M48 28l-6-2 5-5" fill="none" stroke="#1D0C00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 3D box shape -->
+  <polygon points="20,24 32,16 44,24 32,32" fill="none" stroke="#1D0C00" stroke-width="2"/>
+  <polygon points="20,24 20,40 32,48 32,32" fill="none" stroke="#1D0C00" stroke-width="2"/>
+  <polygon points="44,24 44,40 32,48 32,32" fill="none" stroke="#1D0C00" stroke-width="2"/>
+  
+  <!-- Tape strip -->
+  <path d="M32,16 v10 l-4,-2" stroke="#1D0C00" stroke-width="2" fill="none"/>
+</svg>

@@ -1,0 +1,448 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hp_slider_7NjeTD": {
+      "type": "hp-slider",
+      "blocks": {
+        "custom_slider_8kKBJG": {
+          "type": "custom_slider",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_18.png",
+            "image_mobile": "shopify://shop_images/Rectangle_19.png",
+            "slider_text": "An ordinary tee doesn’t suit an uncommon man.",
+            "primary_url": "shopify://pages/cotton-story",
+            "primary_text": "Know More",
+            "secondary_url": "shopify://collections/all",
+            "secondary_text": "Explore Products"
+          }
+        },
+        "custom_slider_gTmgR8": {
+          "type": "custom_slider",
+          "disabled": true,
+          "settings": {
+            "slider_text": "",
+            "primary_url": "",
+            "primary_text": "",
+            "secondary_url": "",
+            "secondary_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_slider_8kKBJG",
+        "custom_slider_gTmgR8"
+      ],
+      "name": "Custom Slider",
+      "settings": {
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "image_shape": "default",
+        "carousel_gap": 20,
+        "carousel_gap_mobile": 10,
+        "show_pagination": true,
+        "show_arrows": false,
+        "padding_right": 0,
+        "padding_right_mobile": 0,
+        "color_scheme": ""
+      }
+    },
+    "product_listing_GCtkna": {
+      "type": "product-listing",
+      "name": "New Arrivals",
+      "settings": {
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16,
+        "padding_top_desktop": 32,
+        "padding_bottom_desktop": 32,
+        "collection_product": "our-products",
+        "title": "Our Products",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "image_shape": "default",
+        "carousel_gap": 20,
+        "carousel_gap_mobile": 10,
+        "show_pagination": true,
+        "show_arrows": true,
+        "columns_desktop": 3,
+        "padding_right": 0,
+        "padding_right_mobile": 0,
+        "color_scheme": ""
+      }
+    },
+    "dotted_tabs_9TRhKH": {
+      "type": "dotted-tabs",
+      "blocks": {
+        "slide_Fh3K77": {
+          "type": "slide",
+          "settings": {
+            "title": "Origins",
+            "description": "Founded in 1954, Arizona Farms , USA",
+            "image": "shopify://shop_images/image_30.png",
+            "image_mobie": "shopify://shop_images/Frame_630.png",
+            "caption": "It starts in the fields, where the world’s softest, long-staple cotton is handpicked with care."
+          }
+        },
+        "slide_Wja4N9": {
+          "type": "slide",
+          "settings": {
+            "title": "Exclusivity",
+            "description": "Grows 1% world’s rarest cotton",
+            "image": "shopify://shop_images/WhatsApp_Image_2025-06-21_at_11.04.06_AM.jpg",
+            "image_mobie": "shopify://shop_images/WhatsApp_Image_2025-06-21_at_11.03.04_AM.jpg",
+            "caption": "This isn’t ordinary cotton. It’s Supima , grown exclusively in the sunlit fields of California and Arizona, and harvested from the top 1% of the world’s cotton yield."
+          }
+        },
+        "slide_L7VazY": {
+          "type": "slide",
+          "settings": {
+            "title": "Why It Matters",
+            "description": "Softest , Proven",
+            "image": "shopify://shop_images/WhatsApp_Image_2025-06-21_at_11.08.24_AM.jpg",
+            "image_mobie": "shopify://shop_images/WhatsApp_Image_2025-06-21_at_11.11.11_AM.jpg",
+            "caption": "Its extra-long fibers make it twice as strong, naturally softer, and finest cotton in the world."
+          }
+        }
+      },
+      "block_order": [
+        "slide_Fh3K77",
+        "slide_Wja4N9",
+        "slide_L7VazY"
+      ],
+      "name": "Cotton Story Timeline",
+      "settings": {
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 60,
+        "timeline_heading": "The Softest Cotton Story",
+        "timeline_subheading": "Where comfort begins, with the finest premium cotton",
+        "link_text": "Learn More",
+        "link": "shopify://pages/cotton-story"
+      }
+    },
+    "real_diffrences_pR3LbD": {
+      "type": "real-diffrences",
+      "blocks": {
+        "difference_block_tXf93z": {
+          "type": "difference_block",
+          "settings": {
+            "block_feature": "Fiber Length",
+            "block_subfeature": "Feel smoother, Lasts longer",
+            "block_left_badge": "Supima Cotton",
+            "block_left_text": "Extra long staple (≥1,5”)",
+            "block_right_badge": "Regular Indian Cotton",
+            "block_right_text": "Short-Medium Staple (<1.1”)"
+          }
+        },
+        "difference_block_yxHmPX": {
+          "type": "difference_block",
+          "settings": {
+            "block_feature": "Traceability",
+            "block_subfeature": "Comfort you can feel all day",
+            "block_left_badge": "Supima Cotton",
+            "block_left_text": "Grown dye penetration, fades slower",
+            "block_right_badge": "Regular Indian Cotton",
+            "block_right_text": "Common, no certified Tracing"
+          }
+        },
+        "difference_block_xiLrHU": {
+          "type": "difference_block",
+          "settings": {
+            "block_feature": "Softness",
+            "block_subfeature": "Comfort you can feel all day",
+            "block_left_badge": "Supima Cotton",
+            "block_left_text": "Silky, luxurious hand feel",
+            "block_right_badge": "Regular Indian Cotton",
+            "block_right_text": "Short-Medium Staple (<1.1”)"
+          }
+        },
+        "difference_block_TKtxbr": {
+          "type": "difference_block",
+          "settings": {
+            "block_feature": "Durability",
+            "block_subfeature": "Holds shae & feel after many wishes",
+            "block_left_badge": "Supima Cotton",
+            "block_left_text": "Stronger yarn, less pilling",
+            "block_right_badge": "Regular Indian Cotton",
+            "block_right_text": "Weaker pills & fades"
+          }
+        },
+        "difference_block_hTLgjT": {
+          "type": "difference_block",
+          "settings": {
+            "block_feature": "Color Retention",
+            "block_subfeature": "Rich color stays vibrant longer",
+            "block_left_badge": "Supima Cotton",
+            "block_left_text": "Extra long staple (≥1,5”)",
+            "block_right_badge": "Regular Indian Cotton",
+            "block_right_text": "Short-Medium Staple (<1.1”)"
+          }
+        }
+      },
+      "block_order": [
+        "difference_block_tXf93z",
+        "difference_block_yxHmPX",
+        "difference_block_xiLrHU",
+        "difference_block_TKtxbr",
+        "difference_block_hTLgjT"
+      ],
+      "name": "Real Differnces",
+      "settings": {
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 60,
+        "section_heading": "Real Difference",
+        "section_subheading": "Every fiber is promise of durability, breathbility, and timeles comfort.",
+        "blocks_heading": "Features"
+      }
+    },
+    "shop_collection_ezF9Kw": {
+      "type": "shop-collection",
+      "blocks": {
+        "collection_block_9KxyBg": {
+          "type": "collection_block",
+          "settings": {
+            "image": "shopify://shop_images/3_df68eeef-9a3a-4306-98cb-022cf061d9dd.jpg",
+            "collection_heading": "Feather",
+            "collection_text": "Our lightest, softest layer yet.",
+            "collection_url": "shopify://collections/feather"
+          }
+        },
+        "collection_block_rmD7yK": {
+          "type": "collection_block",
+          "settings": {
+            "image": "shopify://shop_images/6_eb5e3042-f472-4dfc-8b75-af73d089a2a6.jpg",
+            "collection_heading": "Class",
+            "collection_text": "Not loud. Just elevated.",
+            "collection_url": "shopify://collections/class"
+          }
+        },
+        "collection_block_wyqDK7": {
+          "type": "collection_block",
+          "settings": {
+            "image": "shopify://shop_images/4_14714ac5-c351-4332-8a52-a64cce643902.jpg",
+            "collection_heading": "Editor",
+            "collection_text": "The uniform of the respected.",
+            "collection_url": "shopify://collections/editor"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_9KxyBg",
+        "collection_block_rmD7yK",
+        "collection_block_wyqDK7"
+      ],
+      "name": "Shop the Collection",
+      "settings": {
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 60,
+        "section_heading": "Shop the Collection",
+        "button_text": "Shop Now",
+        "button_url": "shopify://collections/all"
+      }
+    },
+    "custom_richtext_d4RCcH": {
+      "type": "custom-richtext",
+      "name": "Custom Richtext",
+      "settings": {
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "section_heading": "",
+        "section_content": "“We began with a question: why hasn’t casual wear evolved? Round necks, polos, these everyday essentials have stayed the same for decades. In a world that upgrades everything else, we found a quiet space still waiting for care. So we decided to begin there with intention, not noise.”",
+        "button_url": "shopify://pages/about-us",
+        "button_text": "About More"
+      }
+    },
+    "product_comfort_hp_DjbKMX": {
+      "type": "product-comfort--hp",
+      "custom_css": [
+        ".text-block {text-align: left;}"
+      ],
+      "name": "Product Comfort",
+      "settings": {
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 0,
+        "image": "shopify://shop_images/WhatsApp_Image_2025-06-21_at_4.38.09_PM.jpg",
+        "image_mobile": "shopify://shop_images/WhatsApp_Image_2025-06-21_at_4.38.44_PM.jpg",
+        "span_text": "",
+        "block_heading": "Product Comfort",
+        "block_text": "<p>It doesn’t just look good. It feels like nothing else you’ve worn.</p><ul><li>Barely there</li><li>Effortless fit</li><li>Breathes easy<br/></li></ul>",
+        "image_alignment": "right"
+      }
+    },
+    "product_comfort_hp_rx8Leh": {
+      "type": "product-comfort--hp",
+      "custom_css": [
+        "@media only screen and (min-width: 768px) {.text-block {padding-left: 70px; }}"
+      ],
+      "name": "Product Comfort",
+      "settings": {
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 30,
+        "padding_bottom_desktop": 60,
+        "image": "shopify://shop_images/WhatsApp_Image_2025-06-21_at_4.53.42_PM.jpg",
+        "image_mobile": "shopify://shop_images/WhatsApp_Image_2025-06-21_at_4.55.31_PM.jpg",
+        "span_text": "",
+        "block_heading": "Our Manufacturing",
+        "block_text": "<p>It’s not just made. It’s carefully built, layer by layer.</p><ul><li>Skilled hands</li><li>Clean stitches</li><li>Slow process<br/><br/><br/></li></ul>",
+        "image_alignment": "left"
+      }
+    },
+    "custom_testimonals_BQUirP": {
+      "type": "custom-testimonals",
+      "blocks": {
+        "testimonial_block_UqJQKJ": {
+          "type": "testimonial_block",
+          "settings": {
+            "image": "shopify://shop_images/Ellipse_16.png",
+            "cust_name": "Mehwish",
+            "cust_designation": "CEO of Coca soft",
+            "cust_words": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>"
+          }
+        },
+        "testimonial_block_Wgg8CW": {
+          "type": "testimonial_block",
+          "settings": {
+            "image": "shopify://shop_images/Ellipse_16.png",
+            "cust_name": "Mehwish",
+            "cust_designation": "CEO of Coca soft",
+            "cust_words": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>"
+          }
+        },
+        "testimonial_block_ixrUW8": {
+          "type": "testimonial_block",
+          "settings": {
+            "image": "shopify://shop_images/Ellipse_16.png",
+            "cust_name": "Mehwish",
+            "cust_designation": "CEO of Coca soft",
+            "cust_words": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>"
+          }
+        },
+        "testimonial_block_8zAe3H": {
+          "type": "testimonial_block",
+          "settings": {
+            "image": "shopify://shop_images/Ellipse_16.png",
+            "cust_name": "Mehwish",
+            "cust_designation": "CEO of Coca soft",
+            "cust_words": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_block_UqJQKJ",
+        "testimonial_block_Wgg8CW",
+        "testimonial_block_ixrUW8",
+        "testimonial_block_8zAe3H"
+      ],
+      "disabled": true,
+      "name": "Custom Testimonials",
+      "settings": {
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 10,
+        "padding_bottom_desktop": 6,
+        "heading": "Highlight  Customer Words"
+      }
+    },
+    "faqs_aMwXBr": {
+      "type": "faqs",
+      "blocks": {
+        "faq_h6iGXy": {
+          "type": "faq",
+          "settings": {
+            "question": "What Shipping Methods Are Available?",
+            "answer": "We proudly offer international shipping for a seamless shopping experience worldwide."
+          }
+        },
+        "faq_UVBzTE": {
+          "type": "faq",
+          "settings": {
+            "question": "What are your shipping return policies?",
+            "answer": "We proudly offer international shipping for a seamless shopping experience worldwide."
+          }
+        },
+        "faq_BT83CR": {
+          "type": "faq",
+          "settings": {
+            "question": "What Payment Methods Are Accepted?",
+            "answer": "We proudly offer international shipping for a seamless shopping experience worldwide."
+          }
+        },
+        "faq_CkdGQX": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you charge sales tax on any item?",
+            "answer": "We proudly offer international shipping for a seamless shopping experience worldwide."
+          }
+        },
+        "faq_nK6Nwy": {
+          "type": "faq",
+          "settings": {
+            "question": "I want to return my purchase! What can do I do?",
+            "answer": "We proudly offer international shipping for a seamless shopping experience worldwide."
+          }
+        },
+        "faq_XAjiWe": {
+          "type": "faq",
+          "settings": {
+            "question": "How can I get assistance if I need it?",
+            "answer": "We proudly offer international shipping for a seamless shopping experience worldwide."
+          }
+        }
+      },
+      "block_order": [
+        "faq_h6iGXy",
+        "faq_UVBzTE",
+        "faq_BT83CR",
+        "faq_CkdGQX",
+        "faq_nK6Nwy",
+        "faq_XAjiWe"
+      ],
+      "disabled": true,
+      "name": "FAQ Accordion",
+      "settings": {
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 80,
+        "heading": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "hp_slider_7NjeTD",
+    "product_listing_GCtkna",
+    "dotted_tabs_9TRhKH",
+    "real_diffrences_pR3LbD",
+    "shop_collection_ezF9Kw",
+    "custom_richtext_d4RCcH",
+    "product_comfort_hp_DjbKMX",
+    "product_comfort_hp_rx8Leh",
+    "custom_testimonals_BQUirP",
+    "faqs_aMwXBr"
+  ]
+}

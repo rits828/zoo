@@ -1,0 +1,182 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_TAhCz7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "image_with_text_zMUf8Y": {
+          "type": "image_with_text",
+          "settings": {
+            "icon": "<svg width=\"30\" height=\"26\" viewbox=\"0 0 30 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.02326 19.7857C7.05997 19.7857 6.27907 20.5852 6.27907 21.5714C6.27907 22.5577 7.05997 23.3572 8.02326 23.3572C8.98654 23.3572 9.76744 22.5577 9.76744 21.5714C9.76744 20.5852 8.98654 19.7857 8.02326 19.7857ZM21.9767 19.7857C21.0135 19.7857 20.2326 20.5852 20.2326 21.5714C20.2326 22.5577 21.0135 23.3572 21.9767 23.3572C22.94 23.3572 23.7209 22.5577 23.7209 21.5714C23.7209 20.5852 22.94 19.7857 21.9767 19.7857ZM6.62791 10.5001C7.20588 10.5001 7.67442 10.9798 7.67442 11.5715C7.67442 12.1632 7.20588 12.6429 6.62791 12.6429H1.04651C0.468539 12.6429 0 12.1632 0 11.5715C0 10.9798 0.468539 10.5001 1.04651 10.5001H6.62791ZM9.4186 6.21436C9.99658 6.21436 10.4651 6.69406 10.4651 7.28579C10.4651 7.87752 9.99658 8.35721 9.4186 8.35721H1.04651C0.468539 8.35721 0 7.87752 0 7.28579C0 6.69406 0.468539 6.21436 1.04651 6.21436H9.4186ZM30 14.4286C30 16.0817 30.0016 17.4292 29.8624 18.4897C29.737 19.4447 29.4845 20.289 28.929 20.9911L28.6714 21.2827C27.8819 22.0908 26.873 22.3981 25.6927 22.5299C25.2743 24.2355 23.7725 25.5 21.9767 25.5C20.2207 25.5 18.7439 24.2912 18.2881 22.6429H11.7119C11.2561 24.2912 9.7793 25.5 8.02326 25.5C6.22735 25.5 4.72423 24.2357 4.30596 22.5299C3.21766 22.4083 2.27438 22.1386 1.51526 21.4626L1.32858 21.2827C0.472925 20.4066 0.187698 19.2672 0.0776708 17.9261L0.0395167 17.3388V17.2299C0.0665076 16.6874 0.491524 16.2433 1.03289 16.2157C1.57424 16.1881 2.03935 16.5868 2.11891 17.1239L2.12981 17.2327L2.16524 17.767C2.26317 18.9178 2.4753 19.4265 2.80841 19.7676L2.96239 19.9057C3.24702 20.1293 3.65455 20.2851 4.36592 20.38C4.85875 18.7929 6.30973 17.6429 8.02326 17.6429C9.7793 17.6429 11.2561 18.8517 11.7119 20.5H18.2881C18.7439 18.8517 20.2207 17.6429 21.9767 17.6429C23.6901 17.6429 25.1398 18.7931 25.6327 20.38C26.4837 20.2666 26.9003 20.0657 27.1916 19.7676L27.2938 19.6518C27.524 19.3652 27.6903 18.9519 27.7884 18.2051C27.9046 17.3205 27.907 16.1425 27.907 14.4286V12.6429H22.3951C21.5577 12.6429 20.8966 12.6524 20.3307 12.5173L20.0936 12.4504C18.9985 12.0862 18.1253 11.2396 17.7076 10.1499L17.6299 9.92807C17.4292 9.29571 17.4419 8.55171 17.4419 7.57178C17.4419 6.10251 17.4324 5.47043 17.3356 5.03831L17.2879 4.86392C16.9967 3.94663 16.3205 3.21461 15.4497 2.86477L15.2725 2.80059C14.8393 2.65649 14.2674 2.64295 12.6276 2.64295H1.04651C0.468539 2.64295 0 2.16326 0 1.57152C0 0.979793 0.468539 0.5001 1.04651 0.5001H12.6276C14.1045 0.5001 15.0919 0.486962 15.9198 0.762375L16.2141 0.869797C17.3869 1.34086 18.3478 2.22791 18.9299 3.35723H21.0297C22.0238 3.35723 22.8466 3.35581 23.522 3.42559C24.2211 3.49786 24.8483 3.65298 25.4392 4.01432C26.0298 4.37557 26.4589 4.8668 26.8523 5.46241C27.2326 6.03815 27.6223 6.78027 28.0937 7.67641V7.6778L29.8746 11.0637C29.9567 11.2198 30 11.3942 30 11.5715V14.4286ZM19.5349 7.57178C19.5349 8.71854 19.5483 9.03855 19.6207 9.2668L19.6957 9.46491C19.8981 9.91269 20.2753 10.2576 20.7395 10.4122H20.7408L20.9357 10.4582C21.17 10.4931 21.5555 10.5001 22.3951 10.5001H27.2011L26.2514 8.69343C25.7601 7.7593 25.4266 7.1279 25.119 6.66218C24.8249 6.21703 24.6007 5.99834 24.3655 5.85443C24.13 5.71047 23.8349 5.61133 23.3121 5.55728C22.7659 5.50082 22.0658 5.50008 21.0297 5.50008H19.4967C19.5362 6.07904 19.5349 6.75161 19.5349 7.57178Z\" fill=\"black\"></path>\n</svg>",
+            "heading": "Estimated delivery days",
+            "text": "<p>Approx. Within 5-7 Working day</p>"
+          }
+        },
+        "icon_with_text_HajzD6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "truck",
+            "image_1": "shopify://shop_images/icon_2.png",
+            "heading_1": "Shippiing PAN india",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/icon_1.png",
+            "heading_2": "100% secure payment",
+            "icon_3": "truck",
+            "image_3": "shopify://shop_images/icon_3.png",
+            "heading_3": "FREE Return in 15 days"
+          }
+        },
+        "richtext_4DptGc": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "richtext": "<h5><strong> Material & Care</strong></h5><ul><li>100% Mercerized Supima Cotton</li><li>240 GSM, Interlock Knit</li><li>Azo-free European dyes </li></ul><h5><strong>Care:</strong></h5><p>Gentle machine wash<br/> Do not bleach<br/> Do not tumble dry<br/> Do not wring<br/> Iron inside out</p><p><strong>Returns & Exchanges<br/></strong>7-day return and exchange.<br/> Item must be unused and with tags.<br/> Email <br/>care@sirjorge.com  with your order ID.<br/><br/><br/><br/><br/><strong><br/><br/><br/></strong><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>"
+          }
+        },
+        "collapsible_tab_73XjpU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Descrption",
+            "icon": "none",
+            "content": "<p>A lightweight round neck tee made from 100% Supima cotton. Soft, breathable, and made for everyday comfort. No drama. Just a clean, easy fit.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_EpEPz8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Material",
+            "icon": "none",
+            "content": "<ul><li>100% Mercerized Supima Cotton</li><li>240 GSM, Interlock Knit</li><li>Azo-free dyes</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_GGwP4p": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care",
+            "icon": "none",
+            "content": "<ul><li>Gentle machine wash</li><li>Do not bleach</li><li>Do not tumble dry</li><li>Do not wrin</li><li>Iron inside out</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Et3dAT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Returns & Exchanges",
+            "icon": "none",
+            "content": "<p>7-day return and exchange.<br/>Item must be unused and with tags.<br/>Email care@sirjorge.com with your order ID.</p>",
+            "page": ""
+          }
+        },
+        "judge_me_reviews_review_widget_TLbkGE": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "judge_me_reviews_preview_badge_TAhCz7",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "image_with_text_zMUf8Y",
+        "icon_with_text_HajzD6",
+        "richtext_4DptGc",
+        "collapsible_tab_73XjpU",
+        "collapsible_tab_EpEPz8",
+        "collapsible_tab_GGwP4p",
+        "collapsible_tab_Et3dAT",
+        "judge_me_reviews_review_widget_TLbkGE"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "size_chart": true,
+        "size_chart_image": "shopify://shop_images/WhatsApp_Image_2025-06-26_at_11.48.42_AM.jpg",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "1750491438516799be": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_4i84wC": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_4i84wC"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "cotton_quality_BxkgQe": {
+      "type": "cotton-quality",
+      "disabled": true,
+      "name": "Cotton Quality",
+      "settings": {
+        "background_image": "shopify://shop_images/Frame_588.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1750491438516799be",
+    "cotton_quality_BxkgQe"
+  ]
+}

@@ -1,0 +1,15 @@
+.container-richtext {
+  text-align: center;
+}
+.upper-container {
+  background: #eee9e6;
+  padding: 15px;
+}
+.upper-container h2 {
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  text-align: center;
+}

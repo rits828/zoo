@@ -1,0 +1,77 @@
+.dyes-image img {
+  height: 100%;
+  width: 100%;
+}
+.dyes-image {
+  margin-top: 20px;
+}
+.dyes-content {
+  padding: 20px;
+  background: #eee9e6;
+  border-radius: 20px;
+}
+.primary-text p {
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+.badge-block {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 80px;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+.badge-svg {
+  border-radius: 50%;
+  background: #eee9e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 18px;
+}
+p.badge-heading {
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+p.badge-text {
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  max-width: 95%;
+}
+@media only screen and (min-width: 768px) {
+  .dyes-content--blocks {
+    display: flex;
+    align-items: center;
+  }
+  .dyes-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .dyes-content {
+    padding: 50px;
+    border-radius: 20px 0px 0px 20px;
+  }
+  .primary-text p,
+  p.badge-heading {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .badge-block {
+    margin-top: 40px;
+    padding: 20px;
+    width: fit-content;
+  }
+}

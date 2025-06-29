@@ -1,0 +1,33 @@
+{{ 'desktop-menus.css' | asset_url | stylesheet_tag }}
+<div class="menu-strip">
+  <ul class="menu-strip__list">
+    {% for link in linklists[section.settings.menu].links %}
+      <li class="menu-strip__item">
+        <a href="{{ link.url }}" class="menu-strip__link">
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Menu Strip",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Menu Strip"
+    }
+  ]
+}
+{% endschema %}
+
+

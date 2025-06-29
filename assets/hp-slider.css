@@ -1,0 +1,123 @@
+.slider-image--block img {
+  height: 100%;
+  width: 100%;
+}
+.custom-slider.page-width {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.hp-slider .text--content h2 {
+  margin: 0;
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  color: #ffffff;
+}
+.hp-slider .btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.slider-content {
+  position: relative;
+}
+.slider-text--content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.hp-slider a.primary-btn {
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  padding: 12px 47.5px;
+  border-radius: 12px;
+  margin-top: 19px;
+}
+.hp-slider a.secondary-btn {
+  text-decoration: none;
+  color: #532200;
+  background: #ffffff;
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+
+.hp-slider .splide__slide  {
+  width: 100% !important;
+}
+
+.hp-slider .splide__arrow {
+  background-color: transparent;
+  top: unset;
+  bottom: 20px;
+}
+.hp-slider .splide__arrow--next svg,
+.hp-slider .splide__arrow--prev svg {
+  rotate: 180deg;
+  width: 28px;
+  height: 9px;
+}
+
+.hp-slider .splide__pagination__page.is-active {
+  transform: scale(1);
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.hp-slider .splide__pagination  li {
+  margin-bottom: 2px;
+}
+
+
+.hp-slider .splide__pagination {
+
+  width: min-content;
+    bottom: 31px;
+}
+.hp-slider .splide__arrow:not(:disabled) {
+  opacity: 1;
+}
+
+.hp-slider .splide__arrow--prev {
+  left: unset;
+  right: 20px;
+}
+
+.hp-slider .splide__arrow--next {
+  right: 60px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .hp-slider .text--content h2 {
+    font-size: 70px;
+    line-height: 78px;
+  }
+  .btns {
+    flex-direction: row;
+    column-gap: 20px;
+    margin-top: 19px;
+  }
+  a.primary-btn,
+  a.secondary-btn {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+  }
+}

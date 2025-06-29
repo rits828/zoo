@@ -1,0 +1,274 @@
+{{ 'hp-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-slider page-width {{ section.id }}">
+  <custom-carousel
+    class="splide"
+    data-per-page="{{ section.settings.columns_desktop }}"
+    data-per-page-mobile="{{ section.settings.columns_mobile }}"
+    data-gap="{{ section.settings.carousel_gap }}"
+    data-gap-mobile="{{ section.settings.carousel_gap_mobile }}"
+    data-show-pagination="{{ section.settings.show_pagination }}"
+    data-show-arrows="{{ section.settings.show_arrows }}"
+    data-padding-right="{{ section.settings.padding_right }}"
+    data-padding-right-mobile="{{ section.settings.padding_right_mobile }}"
+  >
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for block in section.blocks %}
+          <li class="splide__slide">
+            <div class="slider-content">
+              <div class="slider-image--block">
+                {% if block.settings.image != blank %}
+                  {% render 'responsive-picture' class = 'image' mobileImage: block.settings.image_mobile, desktopImage: block.settings.image %}
+                {% endif %}
+              </div>
+              <div class="slider-text--content">
+                <div class="text--content">
+                  {% if block.settings.slider_text != blank %}
+                    <h2>{{ block.settings.slider_text }}</h2>
+                  {% endif %}
+                  <div class="btns">
+                    {% if block.settings.primary_text != blank %}
+                      <a class="primary-btn" href="{{ block.settings.primary_url }}">
+                        {{- block.settings.primary_text -}}
+                      </a>
+                    {%- endif %}
+                    {% if block.settings.secondary_text != blank %}
+                      <a class="secondary-btn" href="{{ block.settings.secondary_url }}">
+                        {{- block.settings.secondary_text -}}
+                      </a>
+                    {%- endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="splide__arrows">
+      <button class="splide__arrow splide__arrow--prev">
+        {% render 'custom-left-arrow' %}
+      </button>
+      
+      <button class="splide__arrow splide__arrow--next">
+        {%  render 'custom-left-arrow' %}
+      </button>
+    </div>
+  </custom-carousel>
+</div>
+<style>
+   .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+</style>
+{% schema %}
+{
+  "name": "Custom Slider",
+  "tag": "section",
+  "class": "hp-slider",
+  "settings": [
+    {
+    "type": "header",
+    "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image Aspect Ratio",
+      "options": [
+        { "value": "square", "label": "Square" },
+        { "value": "portrait", "label": "Portrait" },
+        { "value": "landscape", "label": "Landscape" },
+        { "value": "adapt", "label": "Adapt to Image" }
+      ],
+      "default": "square"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "label": "Show secondary image on hover",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show product rating",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "label": "Image Shape",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "rounded", "label": "Rounded" },
+        { "value": "circle", "label": "Circle" }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "range",
+      "id": "carousel_gap",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 20,
+      "label": "Carousel gap (desktop)",
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "carousel_gap_mobile",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "default": 10,
+      "label": "Carousel gap (mobile)",
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pagination",
+      "default": true,
+      "label": "Show pagination"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "default": true,
+      "label": "Show navigation arrows"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 0,
+      "label": "Right padding (desktop)",
+      "unit": "px",
+      "info": "Add padding to show partial next product"
+    },
+    {
+      "type": "range",
+      "id": "padding_right_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 0,
+      "label": "Right padding (mobile)",
+      "unit": "px",
+      "info": "Add padding to show partial next product"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.related-products.settings.header__2.content"
+    }
+  ],
+  "blocks": [
+    {
+    "type": "custom_slider",
+    "name": "Custom Slider",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Slider Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Slider Image Mobile"
+      },
+      {
+        "type": "text",
+        "id": "slider_text",
+        "label": "Slider Text"
+      },
+      {
+        "type": "url",
+        "id": "primary_url",
+        "label": "Primary Url"
+      },
+      {
+        "type": "text",
+        "id": "primary_text",
+        "label": "Primary Text"
+      },
+      {
+        "type": "url",
+        "id": "secondary_url",
+        "label": "Secondary Url"
+      },
+      {
+        "type": "text",
+        "id": "secondary_text",
+        "label": "Secondary Text"
+      }
+    ],
+
+  }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slider"
+    }
+  ]
+}
+{% endschema %}

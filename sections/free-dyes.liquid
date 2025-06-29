@@ -1,0 +1,122 @@
+{{ 'free-dyes.css' | asset_url | stylesheet_tag }}
+<div class="free-dyes--section page-width {{ section.id }}">
+  <div class="dyes-content--blocks">
+    <div class="dyes-content">
+      <div class="primary-text">
+        {% if section.settings.content_text != blank %}
+          <p>{{ section.settings.content_text }}</p>
+        {% endif %}
+      </div>
+      <div class="badge-block">
+        {% if section.settings.badge_heading != blank %}
+          <div class="badge-svg">
+            <svg width="32" height="39" viewBox="0 0 32 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.3233 2.91055H13.0077V5.97274C13.0077 8.99105 13.0187 10.7264 12.5909 12.4037C12.2893 13.586 11.78 14.6912 10.9996 16.1738C11.317 16.2106 11.6302 16.2746 11.9365 16.3546C13.4811 16.7581 15.179 17.7003 16.8208 18.6366L17.1859 18.8347C18.9692 19.7649 20.242 19.7758 21.0783 19.5253C21.7386 19.3274 22.2384 18.9307 22.5818 18.4902L22.4595 18.2646C21.0111 15.6041 20.1695 14.0803 19.7418 12.4037C19.314 10.7264 19.3233 8.99104 19.3233 5.97274V2.91055ZM10.0144 18.8192C9.80142 18.864 9.59864 18.957 9.39439 19.1412L7.86846 21.9468C5.9625 25.4478 4.60918 27.9412 3.90207 29.8779C3.20255 31.794 3.26958 32.8131 3.72812 33.579L3.75051 33.6135L3.94857 33.8925C4.46489 34.5173 5.37508 34.9696 7.17955 35.2324C9.25329 35.5344 12.1314 35.5372 16.1664 35.5372C20.2013 35.5372 23.0794 35.5344 25.1532 35.2324C26.9576 34.9696 27.8678 34.5173 28.3842 33.8925L28.5822 33.6135L28.6063 33.5756C29.0631 32.8101 29.1292 31.7913 28.4307 29.8779C27.9003 28.4254 27.0065 26.6597 25.7887 24.3907L24.4625 21.9468L23.9045 20.9221C23.3444 21.4071 22.6561 21.8132 21.8361 22.0588C20.1923 22.5509 18.2099 22.3512 15.9631 21.1804L15.5119 20.9341C13.8019 19.9589 12.4128 19.2129 11.2682 18.9139C10.7165 18.7698 10.3126 18.7565 10.0144 18.8192ZM21.1213 28.5293C21.8251 28.3356 22.5527 28.7489 22.7472 29.4525C22.9415 30.1566 22.5282 30.8857 21.824 31.08L21.8085 31.0835C21.1045 31.2776 20.377 30.8644 20.1827 30.1603C19.9887 29.4563 20.4018 28.7288 21.1058 28.5345L21.1213 28.5293ZM10.538 25.0021C11.2421 24.8074 11.9708 25.2212 12.1655 25.9253C12.3601 26.6291 11.9478 27.3579 11.2441 27.5528L11.2286 27.5562C10.5247 27.7509 9.79598 27.3386 9.60107 26.6348C9.40642 25.9309 9.81874 25.2022 10.5225 25.0073L10.538 25.0021ZM21.9687 5.97274C21.9687 9.11956 21.9793 10.4673 22.3063 11.7492C22.6334 13.0318 23.2729 14.2251 24.7829 16.9987L26.7876 20.6809L28.1069 23.1162C29.3446 25.4211 30.3225 27.3467 30.9159 28.972C31.7126 31.1543 31.9503 33.1502 30.8659 34.95L30.8608 34.9586L30.8367 34.9982V34.9999C29.741 36.7827 27.8547 37.5123 25.5338 37.8503C23.2239 38.1866 20.1142 38.1827 16.1664 38.1827C12.2186 38.1827 9.10881 38.1866 6.79893 37.8503C4.478 37.5123 2.5917 36.7827 1.49606 34.9999L1.49434 34.9965L1.47023 34.9568L1.46678 34.95C0.382442 33.1502 0.620197 31.1543 1.41684 28.972C2.20799 26.8049 3.68173 24.1038 5.54512 20.6809L6.9591 18.0803C7.01032 17.8996 7.10006 17.727 7.23122 17.5757L7.24156 17.5636L7.54984 16.9987L8.52809 15.1886C9.36013 13.6228 9.78113 12.7111 10.0265 11.7492C10.3534 10.4673 10.3623 9.11953 10.3623 5.97274V2.91055H9.11194C8.38143 2.91055 7.78924 2.31835 7.78924 1.58784C7.78924 0.857332 8.38143 0.265137 9.11194 0.265137H23.2208L23.3568 0.272026C24.0234 0.34014 24.5435 0.90327 24.5435 1.58784C24.5435 2.27241 24.0234 2.83554 23.3568 2.90366L23.2208 2.91055H21.9687V5.97274Z" fill="#532200"/>
+            </svg>
+          </div>
+        {% endif %}
+        <div>
+          {% if section.settings.badge_heading != blank %}
+            <p class="badge-heading">{{ section.settings.badge_heading }}</p>
+          {% endif %}
+          {% if section.settings.badge_text != blank %}
+            <p class="badge-text">{{ section.settings.badge_text }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="dyes-image">
+      {% if section.settings.image != blank %}
+        {% render 'responsive-picture' class = 'image' mobileImage: section.settings.image_mobile, desktopImage: section.settings.image %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+<style>
+   .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+</style>
+{% schema %}
+{
+  "name": "AZO-Free Dyes",
+  "settings": [
+    {
+    "type": "header",
+    "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "text",
+      "id": "content_text",
+      "label": "Content Text"
+    },
+    {
+      "type": "text",
+      "id": "badge_heading",
+      "label": "Badge Heading"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Section Mobile Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "AZO-Free Dyes"
+    }
+  ]
+}
+{% endschema %}

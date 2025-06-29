@@ -1,0 +1,71 @@
+h2.testimonials-heading {
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.custom-testimonals--section {
+  background: #eee9e6;
+}
+.name-desig {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.name-desig img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.name-desig p {
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+}
+.name-desig span {
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+.customer-words p {
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+.individual-block {
+  padding: 20px;
+  min-width: 390px;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px 0px #0000000d;
+  border-radius: 16px;
+}
+.testimonial-blocks {
+  display: flex;
+  column-gap: 24px;
+  overflow-x: scroll;
+  padding: 16px 0;
+}
+.testimonial-blocks::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  h2.testimonials-heading {
+    font-size: 40px;
+    line-height: 48px;
+    padding: 24px 0;
+  }
+  .custom-testimonals--section.page-width {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

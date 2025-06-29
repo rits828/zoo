@@ -1,0 +1,104 @@
+{% schema %}
+{
+  "name": "Cotton Quality Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Certification Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "World Softest Cotton"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Cotton Quality Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+.cotton-quality-section {
+  position: relative;
+  background-image: url('{{ section.settings.background_image | image_url }}');
+  background-size: cover;
+  background-position: center;
+  color: #5c2e0c;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cotton-quality-section h2 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.cotton-quality-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.cotton-quality-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cotton-icon-block {
+  background: #4a1e00;
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cotton-icon-block svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+{% endstyle %}
+
+<section class="cotton-quality-section">
+  <h2>We put patience, precision and a lot of care into every tee.<br>Doing it right is a reward in itself</h2>
+
+  <div class="cotton-quality-logos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Supima_logo.svg/320px-Supima_logo.svg.png" alt="SUPIMA" style="height: 40px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/ISO_Logo.svg/320px-ISO_Logo.svg.png" alt="ISO" style="height: 40px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Oeko-Tex-Logo.svg/320px-Oeko-Tex-Logo.svg.png" alt="OEKO TEX" style="height: 40px;">
+  </div>
+
+  <div class="cotton-quality-icons">
+    {% for block in section.blocks %}
+      <div class="cotton-icon-block">
+        <!-- Feather Icon as inline SVG -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.24 4.24c-3.12 3.12-7.39 4.76-11.6 4.54l-.42 2.83c3.77-.25 7.57-1.78 10.44-4.65a13.07 13.07 0 01-9.67 6.8l-.59 3.54C8.94 21 12.7 22 16 22c1.93 0 3.75-.5 5.36-1.36a9.76 9.76 0 00-1.12-16.4z" />
+        </svg>
+        <div>{{ block.settings.title }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

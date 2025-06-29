@@ -1,0 +1,67 @@
+h2.about-us--heading {
+  margin: 0;
+  padding: 30px 0;
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+}
+.about-us--image {
+  line-height: 0;
+}
+.about-us--image img {
+  height: 100%;
+  width: 100%;
+}
+.about-us--text {
+  padding: 20px;
+  background: #eee9e6;
+}
+.about-us--text p {
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: #231f20;
+  margin: 0;
+}
+.about-us-section.page-width {
+  padding: 0 !important;
+}
+a.about-us--button {
+  text-decoration: none;
+  padding: 12px 24px;
+  background: #532200;
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+.btn-container {
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  h2.about-us--heading {
+    padding: 60px 0;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .about-us--content {
+    display: flex;
+    width: 100%;
+  }
+  .about-us--image {
+    width: 44%;
+  }
+  .about-us--text {
+    width: 56%;
+    padding: 60px 50px 50px 50px;
+  }
+  .about-us--text p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

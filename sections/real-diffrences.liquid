@@ -1,0 +1,199 @@
+{{ 'real-diffrences.css' | asset_url | stylesheet_tag }}
+<div class="real-differences--section page-width {{ section.id }}">
+  {% if section.settings.section_heading != blank %}
+    <h2 class="diffrences-heading">{{ section.settings.section_heading }}</h2>
+  {% endif %}
+  {% if section.settings.section_subheading != blank %}
+    <p class="diffrences-subheading">{{ section.settings.section_subheading }}</p>
+  {% endif %}
+  <div class="diffrence-blocks--container mobile-device">
+    {% if section.settings.blocks_heading != blank %}
+      <h4 class="container-heading">{{ section.settings.blocks_heading }}</h4>
+    {% endif %}
+    <div>
+      {% for block in section.blocks %}
+        {% if block.settings.block_feature %}
+          <h3 class="block-feature">{{ block.settings.block_feature }}</h3>
+        {% endif %}
+        {% if block.settings.block_subfeature %}
+          <p class="block-subfeature">{{ block.settings.block_subfeature }}</p>
+        {% endif %}
+        <div class="badges">
+          <div class="left-badge">
+            {% if block.settings.block_left_badge %}
+              <h4 class="block-left--badge">{{ block.settings.block_left_badge }}</h4>
+            {% endif %}
+            {% if block.settings.block_left_text %}
+              <p class="block-left--text">{{ block.settings.block_left_text }}</p>
+            {% endif %}
+          </div>
+          <div class="right-badge">
+            {% if block.settings.block_right_badge %}
+              <h4 class="block-left--badge">{{ block.settings.block_right_badge }}</h4>
+            {% endif %}
+            {% if block.settings.block_right_text %}
+              <p class="block-left--text">{{ block.settings.block_right_text }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="main-container--desktop">
+    <div class="diffrence-blocks--container desktop-device">
+      <div class="block-left">
+        <h3 class="block-left--heading">Features</h3>
+        <div class="left-block--content">
+          {% for block in section.blocks %}
+            <div class="content-inside-left">
+              {% if block.settings.block_feature %}
+                <h3 class="block-feature">{{ block.settings.block_feature }}</h3>
+              {% endif %}
+              {% if block.settings.block_subfeature %}
+                <p class="block-subfeature">{{ block.settings.block_subfeature }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="block-middle">
+        <h3 class="block-left--heading">Supima Cotton</h3>
+        {% for block in section.blocks %}
+          <div class="content-inside-middle">
+            {% if block.settings.block_left_text %}
+              <p class="block-middle--text">{{ block.settings.block_left_text }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="block-right">
+        <h3 class="block-left--heading">Regular Indian Cotton</h3>
+        {% for block in section.blocks %}
+          <div class="content-inside-right">
+            {% if block.settings.block_right_text %}
+              <p class="block-right--text">{{ block.settings.block_right_text }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+   .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+</style>
+{% schema %}
+{
+  "name": "Real Differnces",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "section_subheading",
+      "label": "Section Subheading"
+    },
+    {
+      "type": "text",
+      "id": "blocks_heading",
+      "label": "Blocks Heading",
+      "default": "Features"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "difference_block",
+      "name": "Difference Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_feature",
+          "label": "Block Feature"
+        },
+        {
+          "type": "text",
+          "id": "block_subfeature",
+          "label": "Block Subfeature"
+        },
+        {
+          "type": "text",
+          "id": "block_left_badge",
+          "label": "Block Left Badge"
+        },
+        {
+          "type": "text",
+          "id": "block_left_text",
+          "label": "Block Left Text"
+        },
+        {
+          "type": "text",
+          "id": "block_right_badge",
+          "label": "Block Right Badge"
+        },
+        {
+          "type": "text",
+          "id": "block_right_text",
+          "label": "Block Right Text"
+        },
+      ],
+
+    }
+  ],
+  "presets": [
+    {
+      "name": "Real Differnces"
+    }
+  ]
+}
+{% endschema %}

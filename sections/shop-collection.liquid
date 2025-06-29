@@ -1,0 +1,149 @@
+{{ 'shop-collection.css' | asset_url | stylesheet_tag }}
+<div class="shop-collection--sectiion page-width {{ section.id }}">
+  {% if section.settings.section_heading %}
+    <h2 class="collection-heading">{{ section.settings.section_heading }}</h2>
+  {% endif %}
+  <div class="collection-list">
+    {% for block in section.blocks %}
+      <a href="{{ block.settings.collection_url }}" class="collection-block">
+        <div class="image-block">
+          {% if block.settings.image != blank %}
+            {% render 'responsive-picture' class = 'image' mobileImage: block.settings.image_mobile, desktopImage: block.settings.image %}
+          {% endif %}
+        </div>
+        <div>
+          <div class="collection-data">
+            {% if block.settings.collection_heading != blank %}
+              <p class="collection-block--heading">{{ block.settings.collection_heading }}</p>
+            {% endif %}
+            {% if block.settings.collection_text != blank %}
+              <p class="collection-text">{{ block.settings.collection_text }}</p>
+            {% endif %}
+            {% if block.settings.collection_heading != blank %}
+              <span class="collection-svg">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="50" height="50" rx="25" fill="#EEE9E6"/>
+                  <path d="M33 33V18C33 17.4477 32.5523 17 32 17H17" stroke="#532200" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M33 17L17 33" stroke="#532200" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+            {% endif %}
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+  <div class="collection-btn">
+    {% if section.settings.button_text != blank %}
+      <a href="{{ section.settings.button_url }}">{{ section.settings.button_text }}</a>
+    {% endif %}
+  </div>
+</div>
+<style>
+   .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+</style>
+{% schema %}
+{
+  "name": "Shop the Collection",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Url"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_block",
+      "name": "Collection Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Collection Image"
+        },
+        {
+          "type": "text",
+          "id": "collection_heading",
+          "label": "Collection Heading"
+        },
+        {
+          "type": "text",
+          "id": "collection_text",
+          "label": "Collection Text"
+        },
+        {
+          "type": "url",
+          "id": "collection_url",
+          "label": "Collection Url"
+        }
+      ],
+      "limit": 3
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop the Collection"
+    }
+  ]
+}
+{% endschema %}

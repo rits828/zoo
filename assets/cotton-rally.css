@@ -1,0 +1,65 @@
+.rally-image img {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+.rally-text h2 {
+  margin: 0;
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+}
+.rally-text {
+  margin-top: 50px;
+}
+.rally-image {
+  line-height: 0;
+}
+.rally-text p {
+  margin: 0;
+  font-family: Nohemi;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 22px;
+}
+.sub-block {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.container-rally {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-top: 22px;
+}
+.sub-block span {
+  font-family: Nohemi;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .rally-container {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+  }
+  .rally-image {
+    width: 40%;
+  }
+  .rally-text {
+    width: 60%;
+  }
+  .rally-text h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .container-rally {
+    flex-direction: row;
+    margin-top: 22px;
+    column-gap: 30px;
+  }
+}

@@ -1,0 +1,49 @@
+.cotton-quality--section {
+  position: relative;
+}
+.section-bg img {
+  height: 100%;
+  width: 100%;
+}
+h3.caption-text {
+  margin: 0;
+  font-family: Nohemi;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #532200;
+  padding-bottom: 18px;
+}
+.caption-logos {
+  display: flex;
+  column-gap: 30px;
+}
+.feather-card {
+  height: fit-content;
+  max-width: 110px;
+  padding: 15px;
+  background: #532200;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.feather-card img {
+  height: 30px;
+  width: 30px;
+}
+.feather-cards {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 16px;
+  margin-top: 38px;
+}
+p.card-title {
+  margin: 0;
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+}

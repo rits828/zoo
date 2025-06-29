@@ -1,0 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "about_us_tAEMEQ": {
+      "type": "about-us",
+      "disabled": true,
+      "name": "About Us",
+      "settings": {
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 60,
+        "section_heading": "About Us",
+        "image": "shopify://shop_images/Rectangle_27_1.png",
+        "image_mobile": "shopify://shop_images/Rectangle_27_1.png",
+        "section_text": "I never imagined I’d start a t-shirt brand. But some stories don’t begin with ambition. They begin with observation.My father, every time he wore a t-shirt, would complain. “The neck’s too tight.” “This thing itches.” “I feel sweaty after ten minutes.”It became a ritual — watching him pull at the collar, roll up the sleeves, constantly adjusting, never at ease.One day, it hit me:Maybe the problem isn’t my dad.Maybe the problem is the t-shirts themselves.Why do we spend thousands on shirts that claim to be premium but still miss the basics? Why is comfort treated as an afterthought — especially for grown men who value dignity, not hype?In India, men above 40 rarely shop for themselves. They wear what’s gifted or picked up in a hurry.But they deserve better — not fast fashion, not overpriced logos — but something that respects them.I didn’t want to build just another brand. I wanted to build a ritual — a perfect tee that feels like second skin, fits like memory, and looks like quiet confidence.That’s how Sir Jorge was born.I sourced the world’s finest cotton — Supima, grown in California and Arizona.I obsessed over every detail: the collar rib, the dye, the stitch, even the air between fabric and skin.I sat with manufacturers in Tirupur, tested over 12 samples, and rejected anything that didn’t feel like peace.It’s not just a t-shirt.It’s Softness that never had a brand. Until now.Sir Jorge. World’s Softest Cotton Casuals.",
+        "button_text": "Explore Products",
+        "button_url": ""
+      }
+    },
+    "product_comfort_hp_GbUURK": {
+      "type": "product-comfort--hp",
+      "custom_css": [
+        "@media only screen and (min-width: 768px) {.text-block {width: 55%; } .text-block {width: 45%; } .product-container {column-gap: 56px; }}"
+      ],
+      "name": "Product Comfort",
+      "settings": {
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 60,
+        "image": "shopify://shop_images/Rectangle_30.png",
+        "image_mobile": "shopify://shop_images/Rectangle_30.png",
+        "span_text": "Our Story",
+        "block_heading": "I never imagined I’d start a t-shirt brand",
+        "block_text": "<p>My father, every time he wore a t-shirt, would complain. “The neck’s too tight.” “This thing itches.” “I feel sweaty after ten minutes.”t became a ritual — watching him pull at the collar, roll up the sleeves, constantly adjusting, never at easeOne day, it hit me: Maybe the problem isn’t my dad. Maybe the problem is the t-shirts themselves.Why do we spend thousands on shirts that claim to be premium but still miss the basics? Why is comfort treated as an afterthought — especially for grown men who value dignity, not hype?</p>",
+        "image_alignment": "right"
+      }
+    },
+    "about_richtext_CMENk9": {
+      "type": "about-richtext",
+      "disabled": true,
+      "name": "About Us Richtext",
+      "settings": {
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 60,
+        "richtext_head": "It’s not just a t-shirt. It’s Softness that never had a brand. Until now.",
+        "richtext_para": "<p>In India, men above 40 rarely shop for themselves. They wear what’s gifted or picked up in a hurry. But they deserve better — not fast fashion, not overpriced logos — but something that respects them.<br/><br/> didn’t want to build just another brand. I wanted to build a ritual — a perfect tee that feels like second skin, fits like memory, and looks like quiet confidence.<br/><br/>That’s how Sir Jorge was born. I sourced the world’s finest cotton — Supima, grown in California and Arizona<br/><br/>I obsessed over every detail: the collar rib, the dye, the stitch, even the air between fabric and skin. I sat with manufacturers in Tirupur, tested over 12 samples, and rejected anything that didn’t feel like peace.<br/><br/><br/><br/></p>",
+        "brand_note": "Sir Jorge. World’s Softest Cotton Casuals"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "about_us_tAEMEQ",
+    "product_comfort_hp_GbUURK",
+    "about_richtext_CMENk9"
+  ]
+}

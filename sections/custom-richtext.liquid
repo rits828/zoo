@@ -1,0 +1,101 @@
+{{ 'custom-richtext.css' | asset_url | stylesheet_tag }}
+<div class="custom-richtext page-width {{ section.id }}">
+  {% if section.settings.section_heading != blank %}
+    <h2 class="richtext-heading">{{ section.settings.section_heading }}</h2>
+  {% endif %}
+  <div class="richtext-content--block">
+    <div class="richtext-content">
+      {% if section.settings.section_content != blank %}
+        <p>{{ section.settings.section_content }}</p>
+      {% endif %}
+    </div>
+    <div class="richtext-button">
+      {% if section.settings.button_text != blank %}
+        <a href="{{ section.settings.button_url }}">{{ section.settings.button_text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<style>
+   .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+</style>
+{% schema %}
+{
+  "name": "Custom Richtext",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "section_content",
+      "label": "Section Content"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Url"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Richtext"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,112 @@
+{{ 'image-with--text.css' | asset_url | stylesheet_tag }}
+<div class="image-with--text page-width {{ section.id }}">
+  <div class="data-container {{ section.settings.flex_direction }} {{ section.settings.border_direction }}" >
+    <div class="image-conatin">
+      {% if section.settings.image != blank %}
+        {% render 'responsive-picture' img-class: "", mobileImage: section.settings.image, desktopImage: section.settings.image %}
+      {% endif %}
+    </div>
+    <div class="text-conatin">
+      {% if section.settings.block_heading != blank %}
+        <h2>{{ section.settings.block_heading }}</h2>
+      {% endif %}
+      {% if section.settings.block_text != blank %}
+        <p>{{ section.settings.block_text }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<style>
+   .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+</style>
+{% schema %}
+{
+  "name": "Image with Text",
+  "settings": [
+    {
+    "type": "header",
+    "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "block_heading",
+      "label": "Block Heading"
+    },
+    {
+      "type": "html",
+      "id": "block_text",
+      "label": "Block Text"
+    },
+    {
+      "type": "select",
+      "id": "flex_direction",
+      "label": "Image Position",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "right"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Text"
+    }
+  ]
+}
+{% endschema %}

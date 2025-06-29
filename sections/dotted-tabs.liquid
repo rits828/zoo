@@ -1,0 +1,151 @@
+{{ 'dotted-tabs.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'dotted-timeline-element.js' | asset_url }}" defer></script>
+<div class="page-width {{ section.id }} section-conatiner">
+<dotted-timeline >
+  {% if section.settings.timeline_heading != blank %}
+    <h2 class="timeline-heading">{{ section.settings.timeline_heading }}</h2>
+  {% endif %}
+  {% if section.settings.timeline_subheading != blank %}
+    <p class="timeline-subheading">{{ section.settings.timeline_subheading }}</p>
+  {% endif %}
+  <div class="cotton-timeline">
+    <div class="timeline-left">
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+        <div class="progress-highlight-line"></div>
+        {% for block in section.blocks %}
+          <div class="progress-tabs">
+            
+            <div class="tab-content-wrapper">
+              <button class="tab-button" data-index="{{ forloop.index0 }}">
+                <span class="tab-title">{{ block.settings.title }}</span>
+              </button>
+              <span class="tab-desc">{{ block.settings.description }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="timeline-right">
+      {% for block in section.blocks %}
+        <div class="tab-content {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
+          {% if block.settings.image != blank %}
+            {% render 'responsive-picture',
+              img-class: '',
+              mobileImage: block.settings.image_mobile,
+              desktopImage: block.settings.image
+            %}
+          {% endif %}
+          <p class="caption">{{ block.settings.caption }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- <a href="{{ section.settings.link }}" class="learn-more">{{ section.settings.link_text }}</a> -->
+  </div>
+</dotted-timeline>
+  <div class="button-div">
+    <a class="timeline-link" href="{{ section.settings.link }}">{{ section.settings.link_text }}</a>
+  </div>
+</div>
+<style>
+   .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+}
+
+.progress-container:before {
+  height: calc((100% / {{section.blocks.size}}) * ({{section.blocks.size}} - 1) + 20px);
+}
+</style>
+
+{% schema %}
+{
+  "name": "Cotton Story Timeline",
+  "tag": "section",
+  "class": "cotton-timeline-section",
+  "settings": [
+    {
+    "type": "header",
+    "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom Padding (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom Padding (Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 60
+    },
+    {
+      "type": "text",
+      "id": "timeline_heading",
+      "label": "Timeline Heading"
+    },
+    {
+      "type": "text",
+      "id": "timeline_subheading",
+      "label": "Timeline Subheading"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {"type": "text", "id": "title", "label": "Title"},
+        {"type": "text", "id": "description", "label": "Description"},
+        {"type": "image_picker", "id": "image", "label": "Image"},
+        {"type": "image_picker", "id": "image_mobie", "label": "Image Mobile"},
+        {"type": "text", "id": "caption", "label": "Image Caption"}
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [{"name": "Cotton Story Timeline", "category": "Custom"}]
+}
+{% endschema %}

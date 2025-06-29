@@ -1,0 +1,13 @@
+<div class="size-chart-modal-container">
+  <div class="size-chart-image">
+    <div class='size-chart-buttons'>
+      <button class="size-chart-close-button">
+        X
+      </button>
+      {% render 'responsive-picture',
+        mobileImage: section.settings.size_chart_image,
+        desktopImage: section.settings.size_chart_image
+      %}
+    </div>
+  </div>
+</div>

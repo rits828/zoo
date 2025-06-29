@@ -1,0 +1,102 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "custom_footer_4D4q4J": {
+      "type": "custom-footer",
+      "blocks": {
+        "link_group_fdqCAj": {
+          "type": "link_group",
+          "settings": {
+            "title": "Categories",
+            "text_1": "Round",
+            "link_1": "shopify://collections/round-neck-t-shirt",
+            "text_2": "Polo",
+            "link_2": "shopify://collections/polo-neck-t-shirt",
+            "text_3": "Polo with Pocket",
+            "link_3": "shopify://collections/polo-neck-t-shirt-pocket",
+            "text_4": "",
+            "link_4": "",
+            "text_5": "",
+            "link_5": ""
+          }
+        },
+        "link_group_rEaRpe": {
+          "type": "link_group",
+          "settings": {
+            "title": "Support",
+            "text_1": "Privacy Policy",
+            "link_1": "shopify://policies/privacy-policy",
+            "text_2": "Return Policy",
+            "link_2": "shopify://policies/refund-policy",
+            "text_3": "Terms & Conditions",
+            "link_3": "shopify://policies/terms-of-service",
+            "text_4": "",
+            "link_4": "",
+            "text_5": "",
+            "link_5": ""
+          }
+        },
+        "link_group_xwgNeM": {
+          "type": "link_group",
+          "settings": {
+            "title": "Company",
+            "text_1": "About",
+            "link_1": "shopify://pages/about-us",
+            "text_2": "Contact",
+            "link_2": "shopify://policies/contact-information",
+            "text_3": "",
+            "link_3": "shopify://pages/aboutus",
+            "text_4": "",
+            "link_4": "",
+            "text_5": "",
+            "link_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "link_group_fdqCAj",
+        "link_group_rEaRpe",
+        "link_group_xwgNeM"
+      ],
+      "name": "Custom Footer",
+      "settings": {
+        "footer_image": "shopify://shop_images/Frame_614.png",
+        "footer_image_mobile": "shopify://shop_images/Frame_614.png",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe our newsletter for offers"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "custom_footer_4D4q4J",
+    "footer"
+  ]
+}

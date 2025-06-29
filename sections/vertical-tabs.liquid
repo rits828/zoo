@@ -1,0 +1,139 @@
+{{ 'vertical-tabs.css' | asset_url | stylesheet_tag }}
+<div class="tabs-container page-width {{ section.id }}" id="tabsSection">
+  <div class="tabs-data">
+    <div class="tabs">
+      {% for block in section.blocks %}
+        <div class="tab {% if forloop.first %}active{% endif %}" data-tab="{{ forloop.index0 }}">
+          {{ block.settings.title }}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% for block in section.blocks %}
+      <div class="tab-content {% if forloop.first %}active{% endif %}" data-content="{{ forloop.index0 }}">
+        {% if block.settings.image != blank %}
+          {% render 'responsive-picture',
+            img-class: '',
+            mobileImage: block.settings.image_mobile,
+            desktopImage: block.settings.image
+          %}
+        {% endif %}
+        <p class="tabs-caption">{{ block.settings.text }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<style>
+   .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+</style>
+{% javascript %}
+  const tabs = document.querySelectorAll('#tabsSection .tab');
+  const contents = document.querySelectorAll('#tabsSection .tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      contents.forEach(c => {
+        c.classList.remove('active');
+        if (c.dataset.content === target) {
+          c.classList.add('active');
+        }
+      });
+    });
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Tabs Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "label": "Top Padding (Mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "label": "Bottom Padding (Mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_top_desktop",
+        "label": "Top Padding (Desktop)",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 60
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom_desktop",
+        "label": "Bottom Padding (Desktop)",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 60
+      },
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image Mobile"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Tab Text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Tabs Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,43 @@
+.rally-richtext--section {
+  background: #cabab0;
+  text-align: center;
+}
+.rally-richtext--container {
+  padding: 0 20px;
+}
+.rally-richtext--container h3 {
+  color: #231f20;
+  margin: 0;
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+}
+.rally-richtext--container h4 {
+  margin: 0;
+  font-family: Nohemi;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+}
+.rally-richtext--container p {
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .rally-richtext--container h3 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .rally-richtext--container h4 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .rally-richtext--container {
+    padding: 0 8%;
+  }
+}
