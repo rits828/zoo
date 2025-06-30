@@ -145,6 +145,13 @@
                   <label for="CustomerPassword">
                     {{ 'customer.login_page.password' | t }}
                   </label>
+
+                    <span
+                      id="togglePassword"
+                      style="display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"
+                    >
+                      👁
+                    </span>
                 </div>
 
                 <a id="forgot_password" href="#recover">
@@ -181,6 +188,25 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const passwordInput = document.getElementById('CustomerPassword');
+    const toggleIcon = document.getElementById('togglePassword');
+
+    if (passwordInput && toggleIcon) {
+      passwordInput.addEventListener('input', function () {
+        toggleIcon.style.display = this.value ? 'block' : 'none';
+      });
+
+      toggleIcon.addEventListener('click', function () {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+      });
+    }
+  });
+</script>
+
 
 {% schema %}
 {
