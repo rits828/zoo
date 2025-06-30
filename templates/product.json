@@ -57,13 +57,13 @@
             "layout": "horizontal",
             "icon_1": "truck",
             "image_1": "shopify://shop_images/icon_2.png",
-            "heading_1": "Shippiing PAN india",
+            "heading_1": "Shipping Across India",
             "icon_2": "return",
             "image_2": "shopify://shop_images/icon_1.png",
             "heading_2": "100% secure payment",
             "icon_3": "truck",
             "image_3": "shopify://shop_images/icon_3.png",
-            "heading_3": "FREE Return in 15 days"
+            "heading_3": "7-Day Free Return Policy"
           }
         },
         "richtext_4DptGc": {
@@ -76,7 +76,7 @@
         "collapsible_tab_73XjpU": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Product Descrption",
+            "heading": "Product Description",
             "icon": "none",
             "content": "<p>A lightweight round neck tee made from 100% Supima cotton. Soft, breathable, and made for everyday comfort. No drama. Just a clean, easy fit.<br/><br/></p>",
             "page": ""
@@ -152,6 +152,14 @@
     "1750491438516799be": {
       "type": "apps",
       "blocks": {
+        "kiwi_size_chart_recommender_kiwi_sizing_hT3Bqj": {
+          "type": "shopify://apps/kiwi-size-chart-recommender/blocks/kiwiSizing/b7369922-bf15-44ce-a121-a22a8fcbc4b0",
+          "settings": {
+            "product": "{{product}}",
+            "waitForElementSelector": "",
+            "waitForElementDelay": 5
+          }
+        },
         "judge_me_reviews_review_widget_4i84wC": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "disabled": true,
@@ -159,6 +167,7 @@
         }
       },
       "block_order": [
+        "kiwi_size_chart_recommender_kiwi_sizing_hT3Bqj",
         "judge_me_reviews_review_widget_4i84wC"
       ],
       "settings": {
