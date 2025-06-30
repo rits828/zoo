@@ -3929,3 +3929,9 @@ body.index
 #FacetFiltersForm span#ProductCountDesktop {
   font-family: "Nohemi", sans-serif;
 }
+
+/* slider */
+
+.custom-slider .slider-content .slider-text--content{
+  max-width: 90%;
+}
