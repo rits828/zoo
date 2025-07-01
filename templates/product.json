@@ -56,13 +56,10 @@
           "settings": {
             "layout": "horizontal",
             "icon_1": "truck",
-            "image_1": "shopify://shop_images/icon_2.png",
             "heading_1": "Shipping Across India",
-            "icon_2": "return",
-            "image_2": "shopify://shop_images/icon_1.png",
+            "icon_2": "price_tag",
             "heading_2": "100% secure payment",
-            "icon_3": "truck",
-            "image_3": "shopify://shop_images/icon_3.png",
+            "icon_3": "return",
             "heading_3": "7-Day Free Return Policy"
           }
         },
