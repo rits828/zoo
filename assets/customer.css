@@ -925,3 +925,25 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
 }
+
+
+span.checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+}
+
+span.checkbox-wrapper input[type=checkbox]{
+  width: 16px;
+  height: 16px;
+}
+
+p.terms-checkbox.create-instruction a {
+  font-family: Nohemi;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 8px 0 0;
+  color: #3e1a00;
+}

@@ -119,6 +119,9 @@
             placeholder="{{ 'customer.register.password' | t }}"
           >
           <label for="RegisterForm-password"> Enter your password </label>
+            <span class="toggle-password" style="display: none; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+              👁️
+            </span>
         </div>
         {%- if form.errors contains 'password' -%}
           <span id="RegisterForm-password-error" class="form__message">
@@ -129,10 +132,15 @@
             {{ form.errors.messages.password }}.
           </span>
         {%- endif -%}
-        <p class="create-instruction">
-          By clicking "Create Account" you agree to Afraa Official’s Terms and Conditions and Privacy Policy.
-        </p>
-        <button>
+
+        <span class="checkbox-wrapper">
+          <input type="checkbox" id="terms-checkbox">
+          <p class="terms-checkbox create-instruction">
+            I agree to BLOODY BLACK <a href="/policies/terms-of-service" target="_blank">Terms and Conditions</a> and <a href="/policies/privacy-policy" target="_blank">Privacy Policy</a>.
+          </p>
+        </span>
+
+        <button id="create-account-btn" disabled>
           {{ 'customer.register.submit' | t }}
         </button>
       {%- endform -%}
@@ -143,6 +151,42 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkbox = document.getElementById('terms-checkbox');
+    const button = document.getElementById('create-account-btn');
+    const toggle = document.querySelector('.toggle-password');
+    const passwordInput = document.getElementById('RegisterForm-password');
+
+    // Enable/disable button based on checkbox
+    if (checkbox && button) {
+      button.disabled = !checkbox.checked;
+
+      checkbox.addEventListener('change', () => {
+        button.disabled = !checkbox.checked;
+      });
+    }
+
+    // Show/hide password toggle icon
+    function updateToggleVisibility() {
+      if (toggle && passwordInput) {
+        toggle.style.display = passwordInput.value ? 'block' : 'none';
+      }
+    }
+
+    if (toggle && passwordInput) {
+      updateToggleVisibility();
+
+      passwordInput.addEventListener('input', updateToggleVisibility);
+
+      toggle.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+      });
+    }
+  });
+</script>
 
 {% schema %}
 {

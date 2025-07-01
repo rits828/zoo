@@ -1419,13 +1419,9 @@ shopify-accelerated-checkout-cart {
 }
 
 .share-button__button {
-  font-size: 1.4rem;
-  display: flex;
-  align-items: center;
   color: rgb(var(--color-link));
   margin-left: 0;
   padding-left: 0;
-  min-height: 4.4rem;
 }
 
 details[open] > .share-button__fallback {
@@ -3934,4 +3930,11 @@ body.index
 
 .custom-slider .slider-content .slider-text--content{
   max-width: 90%;
+}
+.product__info-container .icon-with-text {
+  max-width: 44rem;
+}
+
+.share-button__button{
+  margin-bottom: 9px;
 }

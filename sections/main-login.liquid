@@ -146,11 +146,8 @@
                     {{ 'customer.login_page.password' | t }}
                   </label>
 
-                    <span
-                      id="togglePassword"
-                      style="display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"
-                    >
-                      👁
+                    <span id="toggle-password-login" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                      👁️
                     </span>
                 </div>
 
@@ -190,22 +187,31 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('toggle-password-login');
     const passwordInput = document.getElementById('CustomerPassword');
-    const toggleIcon = document.getElementById('togglePassword');
 
-    if (passwordInput && toggleIcon) {
-      passwordInput.addEventListener('input', function () {
-        toggleIcon.style.display = this.value ? 'block' : 'none';
-      });
+    function updateToggleVisibility() {
+      if (toggle && passwordInput) {
+        toggle.style.display = passwordInput.value ? 'block' : 'none';
+      }
+    }
 
-      toggleIcon.addEventListener('click', function () {
+    if (toggle && passwordInput) {
+      updateToggleVisibility();
+
+      passwordInput.addEventListener('input', updateToggleVisibility);
+
+      toggle.addEventListener('click', () => {
         const isPassword = passwordInput.type === 'password';
         passwordInput.type = isPassword ? 'text' : 'password';
       });
     }
   });
 </script>
+
+
+
 
 
 {% schema %}
