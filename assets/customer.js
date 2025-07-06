@@ -83,3 +83,42 @@ class CustomerAddresses {
     }
   };
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Add Address
+  const addBtn = document.querySelector('[aria-controls="AddAddress"]');
+  const addForm = document.getElementById('AddAddress');
+  if (addBtn && addForm) {
+    addForm.style.display = 'none';
+    addBtn.addEventListener('click', function () {
+      addForm.style.display = 'block';
+      document.querySelectorAll('[id^="EditAddress_"]').forEach(f => f.style.display = 'none');
+    });
+    addForm.querySelector('button[type="reset"]').addEventListener('click', function () {
+      addForm.style.display = 'none';
+    });
+  }
+
+  // Edit Address
+  document.querySelectorAll('[id^="EditFormButton_"]').forEach(function (editBtn) {
+    editBtn.addEventListener('click', function () {
+      const id = editBtn.getAttribute('data-address-id');
+      document.getElementById('AddAddress').style.display = 'none';
+      document.querySelectorAll('[id^="EditAddress_"]').forEach(f => f.style.display = 'none');
+      const editForm = document.getElementById('EditAddress_' + id);
+      if (editForm) editForm.style.display = 'block';
+    });
+  });
+
+  // Cancel in Edit Address
+  document.querySelectorAll('[id^="EditAddress_"]').forEach(function (editForm) {
+    editForm.style.display = 'none';
+    const cancelBtn = editForm.querySelector('button[type="reset"]');
+    if (cancelBtn) {
+      cancelBtn.addEventListener('click', function () {
+        editForm.style.display = 'none';
+      });
+    }
+  });
+});

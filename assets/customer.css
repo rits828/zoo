@@ -872,15 +872,15 @@ li[data-address] {
 }
 
 .addresses [aria-expanded="false"] ~ div[id] {
-  display: none;
-}
-
-.addresses [aria-expanded="true"] ~ div[id] {
   display: block;
 }
 
+.addresses [aria-expanded="true"] ~ div[id] {
+  display: none;
+}
+
 .addresses h2 {
-  text-align: left;
+  text-align: center;
 }
 
 li[data-address] > h2 {
@@ -981,4 +981,15 @@ p.terms-checkbox.create-instruction a {
 
 .customer.login .recover-conatiainer a {
   margin: 0 auto;
+}
+
+.customer.addresses {
+  max-width: 80% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+
+.customer.addresses .field {
+  margin-bottom: 1rem;
 }
