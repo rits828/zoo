@@ -38,10 +38,10 @@
             "link_1": "shopify://policies/privacy-policy",
             "text_2": "Return Policy",
             "link_2": "shopify://policies/refund-policy",
-            "text_3": "Terms & Conditions",
-            "link_3": "shopify://policies/terms-of-service",
-            "text_4": "",
-            "link_4": "",
+            "text_3": "Shipping Policy",
+            "link_3": "shopify://policies/shipping-policy",
+            "text_4": "Terms & Conditions",
+            "link_4": "shopify://policies/terms-of-service",
             "text_5": "",
             "link_5": ""
           }
