@@ -47,6 +47,7 @@
                 autocorrect="off"
                 autocapitalize="off"
                 autocomplete="email"
+                required
                 {% if form.errors %}
                   aria-invalid="true"
                   aria-describedby="RecoverEmail-email-error"
@@ -55,6 +56,14 @@
                 placeholder="{{ 'customer.login_page.email' | t }}"
               >
               <label for="RecoverEmail"> Enter Your Email </label>
+              {%- if form.errors contains 'email' or form.errors contains 'form' -%}
+                <small id="RecoverEmail-email-error" class="form__message">
+                  <span class="svg-wrapper">
+                    {{- 'icon-error.svg' | inline_asset_content -}}
+                  </span>
+                  Enter mail/ it cannot be empty
+                </small>
+              {%- endif -%}
             </div>
             {%- if form.errors -%}
               <small id="RecoverEmail-email-error" class="form__message">
@@ -85,7 +94,7 @@
               {{ 'customer.recover_password.success' | t }}
             </h3>
           {%- endif -%}
-          {%- form 'customer_login', novalidate: 'novalidate' -%}
+          {%- form 'customer_login' -%}
             {%- if form.errors -%}
               <h2 class="form__message" tabindex="-1" autofocus>
                 <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
@@ -118,6 +127,7 @@
                   autocomplete="email"
                   autocorrect="off"
                   autocapitalize="off"
+                  required
                   {% if form.errors contains 'form' %}
                     aria-invalid="true"
                   {% endif %}
@@ -137,6 +147,7 @@
                     name="customer[password]"
                     id="CustomerPassword"
                     autocomplete="current-password"
+                    required
                     {% if form.errors contains 'form' %}
                       aria-invalid="true"
                     {% endif %}
