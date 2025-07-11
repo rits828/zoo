@@ -181,7 +181,7 @@
 }
 
 .newsletter-form__field-wrapper {
-  max-width: 36rem;
+  max-width: 100%;
 }
 
 @media screen and (min-width: 750px) {
@@ -505,4 +505,8 @@
       padding-left: 3rem;
     }
   }
+}
+
+.newsletter-form__field-wrapper .field:after {
+  box-shadow: none;
 }

@@ -993,3 +993,19 @@ p.terms-checkbox.create-instruction a {
 .customer.addresses .field {
   margin-bottom: 1rem;
 }
+
+.login-bg--image:not(:has(img)) {
+  position: relative;
+  height: 105vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;  /* vertical center */
+  justify-content: center; /* horizontal center */
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 699px) {
+  .login-bg--image:not(:has(img)) {
+    height: 72vh;
+  }
+}
